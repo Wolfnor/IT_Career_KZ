@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Explore Kazakhstan's IT job market: job titles, cities, experience requirements and historical vacancy data.">
+        <title>IT Career KZ | Kazakhstan IT Job Market</title>
+        <link rel="preconnect" href="https://img.inform.kz">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="assets/snow-leopard-logo-v2.png">
+        <link rel="apple-touch-icon" href="assets/snow-leopard-logo-v2.png">
+    </head>
+    <body id="top">
+        <a class="skip-link" href="#jobs" data-i18n="skip">Go to job list</a>
+        <div class="topbar">
+            <div class="container topbar-inner">
+                <span>Қазақстан · Kazakhstan</span>
+                <span>Independent job market research · Dataset 2023</span>
+            </div>
+        </div>
+        <header class="site-header">
+            <nav class="container navigation" aria-label="Main menu" data-i18n-aria-label="mainNav">
+                <a class="brand" href="#top" aria-label="IT Career KZ home">
+                    <img class="brand-symbol" src="assets/snow-leopard-logo-v2.png" alt="">
+                    <span>IT Career <b>KZ</b>
+                        <small data-i18n="brandTag">JOBS · DATA · KAZAKHSTAN</small>
+                    </span>
+                </a>
+                <div class="nav-links">
+                    <a href="#jobs" data-i18n="navJobs">Job list</a>
+                    <a href="#insights" data-i18n="navInsights">Charts</a>
+                    <a href="#about" data-i18n="navAbout">About this site</a>
+                </div>
+                <a class="nav-cta" href="#jobs" data-i18n="navExplore">View jobs ↗</a>
+                <div class="header-actions">
+                <div class="language-switch" role="group" aria-label="Language">
+                    <button type="button" data-language="en" lang="en" aria-pressed="true">EN</button>
+                    <button type="button" data-language="kk" lang="kk" aria-pressed="false">ҚАЗ</button>
+                    <button type="button" data-language="ru" lang="ru" aria-pressed="false">РУС</button>
+                </div>
+                <button type="button" id="soundToggle" class="sound-toggle" aria-label="Turn click sounds off" title="Turn click sounds off" aria-pressed="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M11 5 6 9H3v6h3l5 4V5Z"/>
+                        <path class="sound-waves" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/>
+                        <path class="sound-muted" d="m16 9 5 6m0-6-5 6"/>
+                    </svg>
+                </button>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- Баннер: пять фотографий сменяются плавно каждые шесть секунд. -->
+            <section class="hero" id="careerBanner" aria-label="IT photos from Kazakhstan" aria-roledescription="carousel" data-i18n-aria-label="carouselLabel">
+                <div class="slides" aria-hidden="true">
+                    <img class="slide is-active" src="assets/banner-user-6.png" alt="" fetchpriority="high" decoding="async">
+                    <img class="slide" src="assets/banner-user-3-enhanced.png" alt="" decoding="async" style="object-position: 65% 38%;">
+                    <img class="slide" src="assets/banner-user-4-enhanced.png" alt="" decoding="async" style="object-position: 65% 38%;">
+                    <img class="slide" src="assets/banner-user-7.png" alt="" decoding="async">
+                    <img class="slide" src="assets/banner-user-5-enhanced.png" alt="" decoding="async" style="object-position: 65% 38%;">
+                </div>
+                <div class="hero-shade"></div>
+                <div class="container hero-content">
+                    <div class="hero-text">
+                        <span class="eyebrow" data-i18n="heroKicker">IT CAREERS IN KAZAKHSTAN</span>
+                        <h1 data-i18n="heroTitle">Explore IT jobs in Kazakhstan.</h1>
+                        <p data-i18n="heroText">Find job roles, cities and work experience requirements. Use the filters to explore the data.</p>
+                        <div class="hero-actions">
+                            <a class="button primary" href="#jobs" data-i18n="heroCTA">View jobs →</a>
+                            <a class="button outline" href="#insights" data-i18n="heroCharts">View charts</a>
+                        </div>
+                        <div class="hero-location" data-i18n="heroLocation">Local teams. Shared ideas. New skills.</div>
+                    </div>
+                </div>
+                <div class="container carousel-bottom">
+                    <div class="slide-description">
+                        <span class="slide-number" id="slideNumber">01 / 05</span>
+                        <span id="slideCaption">Software development · Writing code</span>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="round-button" id="previousSlide" aria-label="Previous photo" data-i18n-aria-label="prevPhoto">←</button>
+                        <div class="slide-dots" aria-label="Choose a photo" data-i18n-aria-label="choosePhoto">
+                            <button class="slide-dot is-active" data-slide="0" aria-label="Photo 1" aria-pressed="true"></button>
+                            <button class="slide-dot" data-slide="1" aria-label="Photo 2" aria-pressed="false"></button>
+                            <button class="slide-dot" data-slide="2" aria-label="Photo 3" aria-pressed="false"></button>
+                            <button class="slide-dot" data-slide="3" aria-label="Photo 4" aria-pressed="false"></button>
+                            <button class="slide-dot" data-slide="4" aria-label="Photo 5" aria-pressed="false"></button>
+                        </div>
+                        <button class="round-button" id="nextSlide" aria-label="Next photo" data-i18n-aria-label="nextPhoto">→</button>
+                        <button class="pause-button" id="pauseSlides" aria-label="Pause slideshow" aria-pressed="false">Pause</button>
+                    </div>
+                </div>
+            </section>
+            <div class="container page-content">
+                <!-- Видео-знакомство. Посетитель сам запускает воспроизведение. -->
+                <section id="intro-video" class="panel intro-video" aria-labelledby="videoTitle">
+                    <div class="video-copy">
+                        <span class="section-kicker" data-i18n="videoKicker">MEET IT CAREER KZ</span>
+                        <h2 id="videoTitle" data-i18n="videoTitle">Explore your options in IT.</h2>
+                        <p data-i18n="videoIntro">Watch a short introduction to the website, then explore jobs, cities and career paths.</p>
+                        <span class="video-meta" data-i18n="videoMeta">50 seconds · Video in English</span>
+                        <a class="button" href="#jobs" data-i18n="heroCTA">View jobs →</a>
+                    </div>
+                    <div class="video-player">
+                        <video id="introVideo" controls playsinline preload="metadata" width="1280" height="720" poster="assets/intro-video-poster.jpg" aria-label="Introduction to IT Career KZ" data-i18n-aria-label="videoLabel">
+                            <source src="assets/intro-video.mp4" type="video/mp4">
+                            <p><span data-i18n="videoFallback">Your browser cannot play this video.</span> <a href="assets/intro-video.mp4" data-i18n="videoOpen">Open video</a></p>
+                        </video>
+                        <p id="videoStatus" class="video-status" role="status" aria-live="polite"></p>
+                    </div>
+                </section>
+                <section class="panel audio-guide" aria-labelledby="guideTitle">
+                    <div>
+                        <span class="section-kicker" data-i18n="guideKicker">AUDIO GUIDE</span>
+                        <h2 id="guideTitle" data-i18n="guideTitle">Welcome! Let me show you around.</h2>
+                        <p data-i18n="guideIntro">A quick tour of search, filters and charts.</p>
+                    </div>
+                    <div class="guide-controls">
+                        <button class="button" type="button" id="guidePlay" data-i18n="guidePlay">Listen</button>
+                        <button class="guide-secondary" type="button" id="guidePause" data-i18n="guidePause" disabled>Pause</button>
+                        <button class="guide-secondary" type="button" id="guideStop" data-i18n="guideStop" disabled>Stop</button>
+                        <label for="guideVoice"><span data-i18n="guideVoice">Voice</span><select id="guideVoice"></select></label>
+                    </div>
+                    <p id="guideStatus" role="status" aria-live="polite"></p>
+                    <p class="guide-note" data-i18n="guideNote">Computer-generated speech. Voices depend on your browser and device.</p>
+                    <details class="guide-transcript">
+                        <summary data-i18n="guideTranscript">Read the guide</summary>
+                        <p id="guideText" data-i18n="guideText"></p>
+                    </details>
+                </section>
+                <!-- Показатели рассчитаны по результатам поиска и фильтрации. -->
+                <section class="overview" aria-label="Dataset overview">
+                    <div class="overview-heading">
+                        <span class="section-kicker" data-i18n="overviewKicker">ABOUT THE DATA</span>
+                        <h2 data-i18n="overviewTitle">The job market in numbers</h2>
+                        <p data-i18n="overviewText">Data from 2023. These numbers follow your search and filters.</p>
+                    </div>
+                    <div class="stats">
+                        <div class="stat">
+                            <strong id="total">—</strong>
+                            <span data-i18n="listings">Job listings</span>
+                            <small data-i18n="listingsSmall">Listings matching your filters</small>
+                        </div>
+                        <div class="stat">
+                            <strong id="cities">—</strong>
+                            <span data-i18n="cities">Cities</span>
+                            <small data-i18n="citiesSmall">Cities in the selected results</small>
+                        </div>
+                        <div class="stat">
+                            <strong id="categories">—</strong>
+                            <span data-i18n="categories">Job categories</span>
+                            <small data-i18n="categoriesSmall">IT and related jobs</small>
+                        </div>
+                        <div class="stat">
+                            <strong id="salaryCount">—</strong>
+                            <span data-i18n="salary">With salary</span>
+                            <small data-i18n="salarySmall">Listings that show a salary</small>
+                        </div>
+                    </div>
+                </section>
+                <section id="jobs" class="job-section">
+                    <div class="section-heading">
+                        <div>
+                            <span class="section-kicker" data-i18n="jobsKicker">FIND A JOB ROLE</span>
+                            <h2 data-i18n="jobsTitle">Job list</h2>
+                            <p data-i18n="jobsIntro">Search by job title or company. Then choose a city, category or experience level.</p>
+                        </div>
+                        <span class="dataset-badge" data-i18n="historical">Data from 2023</span>
+                    </div>
+                    <div class="panel explorer-panel">
+                        <div class="filters">
+                            <label class="search-label" for="search">
+                                <span data-i18n="searchLabel">Job title or company</span>
+                                <input type="search" id="search" placeholder="e.g. Developer, Data Analyst…" autocomplete="off" data-i18n-placeholder="placeholder">
+                            </label>
+                            <label for="city">
+                                <span data-i18n="cityLabel">City</span>
+                                <select id="city">
+                                    <option value="" data-i18n="allCities">All cities</option>
+                                </select>
+                            </label>
+                            <label for="category">
+                                <span data-i18n="categoryLabel">Job category</span>
+                                <select id="category">
+                                    <option value="" data-i18n="allCategories">All categories</option>
+                                </select>
+                            </label>
+                            <label for="experience">
+                                <span data-i18n="experienceLabel">Work experience</span>
+                                <select id="experience">
+                                    <option value="" data-i18n="allExperience">Any experience</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="results-toolbar">
+                            <p id="count" aria-live="polite"></p>
+                            <button id="reset" class="text-button" data-i18n="reset">Reset filters ↺</button>
+                        </div>
+                        <div class="tablewrap" tabindex="0" role="region" aria-label="Job table. Scroll sideways on a small screen." data-i18n-aria-label="tableLabel">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" data-i18n="jobCompany">Job and company</th>
+                                        <th scope="col" data-i18n="cityLabel">City</th>
+                                        <th scope="col" data-i18n="experienceLabel">Work experience</th>
+                                        <th scope="col" data-i18n="salaryHeader">Salary</th>
+                                        <th scope="col" data-i18n="posted">Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="jobsBody"></tbody>
+                            </table>
+                        </div>
+                        <div class="pager">
+                            <span data-i18n="pageHelp">15 jobs per page. Open Details to read more.</span>
+                            <div>
+                                <button id="prev" aria-label="← Previous" data-i18n="previous" data-i18n-aria-label="previous">← Previous</button>
+                                <span id="page"></span>
+                                <button id="next" aria-label="Next →" data-i18n="next" data-i18n-aria-label="next">Next →</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="data-note" data-i18n="dataNote">Salaries are shown as listed. Job titles, company names and full job texts stay in the source language.</p>
+                </section>
+                <section id="insights" class="insights-section">
+                    <details class="charts-disclosure">
+                        <summary class="section-heading charts-summary">
+                            <div>
+                                <span class="section-kicker" data-i18n="insightsKicker">LOOK AT THE NUMBERS</span>
+                                <h2 data-i18n="insightsTitle">Job market charts</h2>
+                                <p data-i18n="chartsHelp">Charts and numbers follow your filters. Click a bar to select or clear a city or category.</p>
+                            </div>
+                            <span class="charts-toggle">
+                                <span class="when-closed" data-i18n="showCharts">Show charts</span>
+                                <span class="when-open" data-i18n="hideCharts">Hide charts</span>
+                                <span class="charts-chevron" aria-hidden="true">⌄</span>
+                            </span>
+                        </summary>
+                        <div class="panel chart-controls">
+                            <div class="filters" id="chartFilters"></div>
+                            <div class="results-toolbar">
+                                <p id="chartCount" role="status" aria-live="polite"></p>
+                                <button type="button" class="text-button" id="chartReset" data-i18n="reset">Reset filters ↺</button>
+                                <a class="text-button" href="#jobs" data-i18n="navJobs">Job list</a>
+                            </div>
+                        </div>
+                        <div class="two charts-content">
+                            <div class="panel chart-panel">
+                                <div class="chart-heading">
+                                    <span class="chart-index">01</span>
+                                    <div>
+                                        <h3 data-i18n="cityChart">Cities with the most listings</h3>
+                                        <p data-i18n="cityChartHelp">Top 5 cities in your results</p>
+                                    </div>
+                                </div>
+                                <div id="cityChart"></div>
+                            </div>
+                            <div class="panel chart-panel">
+                                <div class="chart-heading">
+                                    <span class="chart-index">02</span>
+                                    <div>
+                                        <h3 data-i18n="roleChart">Most common job categories</h3>
+                                        <p data-i18n="roleChartHelp">Top 5 categories in your results</p>
+                                    </div>
+                                </div>
+                                <div id="categoryChart"></div>
+                            </div>
+                        </div>
+                    </details>
+                </section>
+                <section id="about" class="about-section">
+                    <div class="about-intro">
+                        <span class="section-kicker" data-i18n="aboutKicker">ABOUT THIS PROJECT</span>
+                        <h2 data-i18n="aboutTitle">Simple data. Clear choices.</h2>
+                        <p data-i18n="aboutText">My name is Ayaulym. I study Information Systems. I made IT Career KZ to help people explore job data from Kazakhstan.</p>
+                        <a class="source-link" href="https://www.kaggle.com/datasets/armanzhalgasbayev/it-jobs-in-kazakhstan-general-dataset" target="_blank" rel="noopener noreferrer" data-i18n="sourceLink">View the dataset on Kaggle ↗</a>
+                    </div>
+                    <div class="methodology">
+                        <h3 data-i18n="methodTitle">What is in the data?</h3>
+                        <p data-i18n="methodRows">The file has 1,754 rows and 1,508 unique job links. Some jobs appear more than once. Counts include these repeated rows.</p>
+                        <p data-i18n="methodLimit">The data is from 2023. It includes IT, HR and recruitment jobs. This site does not show live jobs or accept job applications.</p>
+                        <a class="download-link" href="results.csv" download data-i18n="download">Download CSV ↓</a>
+                    </div>
+                </section>
+                <noscript>
+                    <p class="noscript-note" data-i18n="noScript">Turn on JavaScript to use search, filters and charts. You can still download the CSV file.</p>
+                </noscript>
+            </div>
+        </main>
+        <footer class="site-footer">
+            <div class="container footer-main">
+                <div>
+                    <a class="footer-brand" href="#top">IT Career <span>KZ</span>
+                    </a>
+                    <p>Careers through the lens of data.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#jobs" data-i18n="navJobs">Job list</a>
+                    <a href="#insights" data-i18n="navInsights">Charts</a>
+                    <a href="#about" data-i18n="navAbout">About this site</a>
+                </div>
+                <a class="back-top" href="#top" data-i18n="backTop">Back to top ↑</a>
+            </div>
+            <div class="container footer-bottom">
+                <span>Created by Ayaulym · Kazakhstan</span>
+
+            </div>
+        </footer>
+        <!-- Короткий щелчок Kenney (CC0). Звук запускается только при нажатии. -->
+        <audio id="clickSound" src="assets/click.wav" preload="auto"></audio>
+
+        <script src="data.js"></script>
+        <script src="i18n.js"></script>
+        <script src="script.js"></script>
+        <script src="carousel.js"></script>
+        <script src="sounds.js"></script>
+        <script src="guide.js"></script>
+        <script src="video.js"></script>
+    </body>
+</html>
